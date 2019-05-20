@@ -38,12 +38,17 @@ def reformat_languages(languages)
   rl = {}
   language_keys = {}
   languages.map do |style, language_data|
+    
       
       language_data.map do |language_name, attributes|
         
-          rl[language_name]= attributes
+          rl[language_name] = attributes
+          rl[language_name][:style].push(style)
           
       end
+  
+  
+  
   end
   
   rl
