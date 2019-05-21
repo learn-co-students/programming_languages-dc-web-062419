@@ -49,6 +49,7 @@ def reformat_languages(languages)
           else
             rl[language_name][:style].push(style)
           
+        end
       end
   
   end
