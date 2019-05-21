@@ -43,10 +43,9 @@ def reformat_languages(languages)
       language_data.map do |language_name, attributes|
         
           rl[language_name] = attributes
-          rl[language_name][:style].push(style)
+          rl[language_name][:style] = []
           
       end
-  
   
   
   end
