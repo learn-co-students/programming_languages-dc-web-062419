@@ -43,10 +43,13 @@ def reformat_languages(languages)
       language_data.map do |language_name, attributes|
         
           rl[language_name] = attributes
-          rl[language_name][:style] = []
+          
+          if rl[language_name][:style].nil? 
+            rl[language_name][:style]= [style]
+          else
+            rl[language_name][:style].push(style)
           
       end
-  
   
   end
   
