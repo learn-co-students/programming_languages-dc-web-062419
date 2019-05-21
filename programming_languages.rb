@@ -49,20 +49,13 @@ def reformat_languages(languages)
       language_data.map do |language_name, attributes|
         
 
-        attributes.map do |k, v|
+        rl[language_name] ||=  attributes
 
-         # rl[language_name][attributes] = {k => v}   
-          rl[language_name] = {k => v}
           
-            #rl[language_name][k] = v
-          if 
-          if rl[language_name][:style].nil?
-           rl[language_name][:style] = []
-          end
-          #binding.pry
+           rl[language_name][:style] ||= []
+
           
-          end
-        rl[language_name][:style] << style
+          rl[language_name][:style] << style
         end
           #rl[language_name][:style] << style
             #if rl[language_name] == :javascript
@@ -77,4 +70,4 @@ def reformat_languages(languages)
         
         
         
-        reformat_languages(languages)
+       # reformat_languages(languages)
